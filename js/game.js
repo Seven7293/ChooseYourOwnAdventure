@@ -6,24 +6,39 @@ var game = {
     levels: {
 
         start: {
-            message: "You come across a dark cave",
+            message: "You enter a mansion, and you see a floating inanimate object. which do you pull out first?",
             choices: [
                 {
-                    text: "Enter the cave",
-                    nextLevel: "cave",
+                    text: "Flashlight",
+                    nextLevel: "ghost",
                 },
 
                 {
-                    text: "Keep on moving",
-                    nextLevel: "field",
+                    text: "Vacuum",
+                    nextLevel: "ghosti",
                 },
             ]
         },
 
-        cave: {
+        ghost: {
             background_image: "fire.gif",
             music: "Final-Fantasy-7-Boss-Battle.mp3",
-            message: "You come across a fire monster or something!",
+            message: "A ghost manifests in front of you! What do you do?",
+            choices: [
+                {
+                    text: "Run Away!",
+                    nextLevel: "BR",
+                },
+
+                {
+                    text: "Scare It Back!",
+                    nextLevel: "Faint",
+                },
+            ]
+        },
+
+        ghosti: {
+            message: "Why? Just... Go back...",
             choices: [
                 {
                     text: "Start over",
@@ -31,16 +46,22 @@ var game = {
                 },
             ]
         },
-
-        field: {
-            message: "Some adventurer you are...",
+    
+        BR: {
+            background_image: "fire.gif",
+            music: "Final-Fantasy-7-Boss-Battle.mp3",
+            message: "You manage to reach a bathroom, but the ghost follows you. You decide to flash the light at it directly. What's next?",
             choices: [
                 {
-                    text: "Start over",
-                    nextLevel: "start",
+                    text: "Vacuum it up",
+                    nextLevel: "saved",
+                },
+
+                {
+                    text: "Run again",
+                    nextLevel: "die",
                 },
             ]
-        },
-
+        }
     }
 };
